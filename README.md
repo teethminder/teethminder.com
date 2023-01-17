@@ -1,2 +1,2 @@
 # teethminder.com
-Main website
+TeethMinder Website
