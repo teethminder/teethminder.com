@@ -1,15 +1,14 @@
+(function ($) {
 
-  (function ($) {
+"use strict";
+
+  // COUNTER NUMBERS
+  jQuery('.counter-thumb').appear(function() {
+    jQuery('.counter-number').countTo();
+  });
   
-  "use strict";
-
-    // COUNTER NUMBERS
-    jQuery('.counter-thumb').appear(function() {
-      jQuery('.counter-number').countTo();
-    });
-    
-    // CUSTOM LINK
-    $('.smoothscroll').click(function(){
+  // CUSTOM LINK
+  $('.smoothscroll').click(function(){
     var el = $(this).attr('href');
     var elWrapped = $(el);
     var header_height = $('.navbar').height();
@@ -26,8 +25,11 @@
       scrollTop: totalScroll
       }, 300);
     }
-});
-    
-  })(window.jQuery);
+  });
+
+  // COPYRIGHT YEAR
+  document.querySelector('#copyright-year').innerHTML = new Date().getFullYear();
+  
+})(window.jQuery);
 
 
